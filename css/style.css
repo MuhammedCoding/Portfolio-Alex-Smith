@@ -1,0 +1,719 @@
+/*
+questions
+1)border radius in photo when i hover 
+2)transform in pic
+3)margin in the paragraph of about section
+4)font - weight in label
+5)big-hr
+6)location img have margin.. why?
+7)hover icon transition 
+8)triangle usability
+9)font family in input
+10)margin in form first -row
+*/
+
+/* common */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.text-roboto{
+    font-family: 'Roboto', sans-serif;
+}
+.text-source{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.container{
+    width: 70%;
+    margin: auto;
+    overflow: hidden;
+    padding: 100px 0;
+}
+h2{
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 30px;
+    padding-bottom: 20px;
+}
+
+.red-color{
+    color: #FF305B;
+}
+
+.color-h2{
+    color: #333333;
+}
+
+.color-p{
+    color: #555555;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    list-style: none;
+    float: left;
+}
+
+ul {
+    overflow: hidden;
+}
+
+a{
+    text-decoration: none;
+}
+
+hr{
+    background-color: #ff3f5c;
+    height:1px;
+    border-width:0;
+    margin: auto;
+    margin-bottom: 5px;
+}
+
+.small-hr{
+    width:100px;
+    
+}
+.big-hr{
+    width:200px;   
+}
+
+.layer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: all 0.5s;
+}
+/* START Header and Navigation bar */
+
+.header{
+   position: absolute;
+   top: 0;
+   width: 100%;
+   
+} 
+
+
+ 
+.header .container {
+    padding: 18px 0px;
+    width: 75%;
+    margin: auto;
+} 
+
+.header a {
+    
+    float: left;
+}
+.container > a{
+    font-weight:800;
+    text-align:start;
+    font-size:24px;
+}
+.container .nav-bar{
+    float: right;
+}
+.header .nav-bar ul li{
+    margin-right: 20px;
+}
+.header .nav-bar ul li a{
+    font-weight: 300;
+    color: white;
+    letter-spacing: 0.5px;
+    transition-property: color;
+    transition-duration: 1s;
+}
+
+.header .nav-bar ul li a:hover{
+    color: #FF305B;
+}
+
+/* END Header and Navigation bar */
+
+/* START HOME SECTION*/
+
+#home{
+    position: relative;
+}
+
+#home img{
+    height: 100%;
+    width: 100%;
+}
+.home-caption{
+    
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 0%;
+    height: 100%;
+    width: 100%;
+    
+}
+.home-caption .caption-container{
+    padding: 250px;
+    width: fit-content;
+    text-align: center;
+    margin: auto;
+}
+
+.home-caption.caption-container p,h1,h3{
+    margin-bottom: 10px;
+}
+.home-caption .caption-container h1{
+    font-size: 70px;
+}
+.home-caption .caption-container h3{
+    font-size: 24px;
+}
+
+.home-caption .caption-container h4{
+    width:fit-content;
+    margin: auto;
+    font-size: 26px;
+    font-weight:300;
+    position: relative;
+}
+
+.home-caption .caption-container h4::after{
+    content: '';
+    position: absolute;
+    background-color: white;
+    height: 30px;
+    width: 2px;
+    right: -12px;
+}
+/* END HOME SECTION */
+
+/* START ABOUT SECTION */
+
+#about .container {
+    width: 70%;
+    margin: auto;
+    overflow: hidden;
+    padding: 100px;
+}
+
+/* Image*/
+#about .container .img-container {
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#about .container .img-container .frame{
+   width: 75%;
+   border: #555555  solid 7px;
+   border-radius: 8px;
+}
+#about .container .img-container .frame .profile-img {
+    position: relative;
+    top: 20px;
+    left: 25px;
+    overflow: hidden;
+}
+#about .container .img-container .frame .profile-img img {
+    width: 100%;
+}
+
+#about .container .img-container .frame .profile-img .layer {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.57);
+    position: absolute;
+    top: 100%;
+    transition: top 0.5s;
+    border-radius: 1%;
+}
+#about .container .img-container .frame .profile-img:hover .layer {
+    top:0;
+}
+
+/* Details Caption */
+#about .container .about-caption {
+    width: 50%;
+    float: right;
+    box-sizing: border-box;
+    padding-left: 20px;
+}
+.about-caption h2,p,ul,li{
+    margin-bottom: 20px;
+}
+.about-caption h2{
+    font-weight:600;
+    line-height:22px;
+    font-size: 34px;
+    position: relative;
+}
+
+.about-caption h2::before{
+    content: '';
+    position: absolute;
+    background-color: #FF305B;
+    height: 24px;
+    width: 5px;
+    left: -12px;
+}
+.about-caption p, .about-caption .about-details, .about-caption .about-buttons{
+    margin-left: -12px;
+}
+.about-caption p{
+    border-bottom: 1px dashed #999999;
+    padding-bottom:25px ;
+}
+.about-details ul li{
+    width: 50%;
+}
+.about-details ul li label{
+    color: #333333;
+    font-weight:600;
+}
+
+.about-buttons{
+    width: 70%;
+    margin: auto;
+    overflow: hidden;
+}
+.about-buttons button{
+    border: none;
+    background-color: #FF305B;
+    border-radius: 3px;
+    float: left;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    margin-right: 10px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 1s;
+}
+
+.about-buttons button:hover {
+    background-color: #EC2403;
+}
+
+/*END ABOUT*/
+
+/* START SERVICES*/
+
+#services {
+    background-color: #F1F1F1;
+}
+
+#services .container{
+    padding-top: 100px;
+    margin: auto;
+    overflow: hidden;
+}
+
+#services h2{
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 30px;
+    padding-bottom: 20px;
+}
+.underlines{
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+}
+
+#services .items{
+    width:100%;
+    overflow: hidden;
+    padding: 40px 0px;
+}
+
+#service .items p, #service .items h3, #service .items img{
+    margin-bottom: 20px;
+}
+
+
+#services .item{
+    width: 25%;
+    float: left;
+    position: relative;
+    overflow: hidden;
+    transition: top 1s;
+    box-sizing: border-box;
+    padding: 30px;
+    transition: all 0.5s;
+}
+
+#services .items img{
+    width: 12%;
+    margin-bottom: 20px;
+    transition: all 0.5s;
+}
+
+.items .item h3{
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+#services .items .item .layer{
+    background-color: white;
+    visibility: hidden;
+}
+#services .items .item:hover{ 
+    background-color: white;
+}
+
+#services .items .item:hover img{ 
+    transform: scale(1.5);
+}
+
+/* END SERVICE*/
+ 
+/*START PORTFOLIO*/
+
+.btn-container button{
+    margin: 20px 0;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    background-color: transparent;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+
+#portfolio .items{
+    width: 100%;
+    overflow: hidden;
+}
+
+#portfolio .container .items .item{
+    width: 33.3%;
+    float: left;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 20px;
+    
+}
+
+#portfolio .container .items .item .image{
+    width: 100%;
+    position: relative;
+}
+
+
+#portfolio .container .items .item .image img{
+    width: 100%;
+}
+#portfolio .container .items .item .image .icon{
+    
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 5%;
+    visibility: hidden;
+}
+
+#portfolio .container .items .item .image:hover .icon {
+    visibility: visible;
+}
+
+#portfolio .layer {
+    background-color:  rgba(0, 0, 0, 0);
+    top: 0;
+    transition: all 0.5s
+}
+#portfolio .container .items .item .image:hover .layer {
+    background-color:  rgba(0, 0, 0, 0.57);
+}
+
+/*END PORTFOLIO*/
+
+/*START STATISTICS SECTION*/
+
+#stat{
+    background-color:#F1F1F1;
+}
+
+#stat .container .items {
+    overflow: hidden;
+    width: 100%;
+}
+
+#stat .container .items .item {
+    width: 25%;
+    float: left;
+    box-sizing: border-box;   
+    text-align: center;
+}
+
+#stat .container .items .item img {
+   width: 10%;
+   margin-bottom: 15px;
+}
+
+#stat .container .items .item h3 {
+    font-weight: 600;
+    font-size: 28px;
+}
+
+/*END STATISTICS SECTION*/
+
+/*START TESTIMONIAL*/
+#TESTIMONIAL .container .item{
+    width: 75%;
+    margin: 30px auto 0 auto;
+    overflow: hidden;
+    background-color: #F1F1F1;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 50px 40px;
+    position: relative;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 200px solid transparent;
+    border-right: 226px solid transparent;
+    border-top: 200px solid #FF305B;
+    transform: rotate(130deg);
+    left: -152px;
+    position: absolute;
+    top: -133px;
+    
+}
+
+#TESTIMONIAL .container .item .caption{
+    float: left;
+    width: 85%;
+    text-align: left;
+    box-sizing: border-box;
+    padding: 5px 20px;
+    line-height:25px;
+}
+
+#TESTIMONIAL .container .item .item-img {
+    position: relative;
+    z-index: 1;
+}
+
+#TESTIMONIAL .container .item img {
+    float: left;
+    width: 15%;
+    border-radius: 50%;
+    box-sizing: border-box;
+    padding: 18px 0px;
+    
+
+}
+#TESTIMONIAL .container .item .caption .location{
+   overflow: hidden;
+   text-align: left;
+   line-height: normal;
+   margin-bottom: 10px;
+}
+#TESTIMONIAL .container .item .caption .location span{
+    float: left;
+}
+#TESTIMONIAL .container .item .caption .location img{
+    float: left;
+    width:16px;
+    margin-right: 4px;
+    padding: 0px;
+}
+
+.stars{
+    width: 15%;
+}
+#TESTIMONIAL .container .item .caption .stars img{
+    border-radius: 0px;
+    box-sizing: border-box;
+    padding: 2px;
+    width: 20%;
+}
+
+.rounded-rec,.circle{
+    display:inline-block;
+    margin: 10px auto;
+}
+.rounded-rec{
+    width: 25px;
+    height: 8px;
+    border-radius: 5px;
+    background-color: #ff3f5c;
+    text-align: center;
+}
+
+.circle{
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    border: #FF305B solid 1px;
+}
+
+/*END TESTIMONIAL*/
+
+/*START BLOG*/
+
+#blog{
+    background-color:#F1F1F1;;
+}
+#blog .items{
+    overflow: hidden;
+}
+#blog .items .item {
+    width: 33.333%;
+    float: left;
+    box-sizing: border-box;
+    padding: 0 10px;
+
+
+}
+#blog .items .item img,iframe {
+    width: 100%;
+}
+iframe{
+    border: none;
+    height: 190px;
+}
+#blog .items .item .caption{
+    background-color: white;
+    padding: 20px;
+}
+#blog .items .item .caption a{
+
+    font-size: 24px;
+    font-weight: 600;
+    color: #333333;
+    letter-spacing: 0.5px;
+    transition-property: color;
+    transition-duration: 0.5s;
+
+}
+#blog .items .item .caption button{
+
+    font-weight: 300;
+    color: #333333;
+    font-size: 14px;
+    transition-property: color;
+    transition-duration: 0.5s;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+}
+#blog .items .item .caption p{
+    margin: 15px 0px;
+}
+#blog .items .item .caption a:hover{
+   color: #FF305B;
+}
+
+#blog .items .item .caption button:hover{
+    color: #FF305B;
+}
+
+/*END BLOG*/
+
+/*START CONTACT*/
+
+#contact {
+    background-color: white;
+}
+
+form{
+    margin: auto;
+    width: 75%;
+    padding: 6px 12px;
+    color: #555;
+}
+
+#contact .btn{
+    width: 75%;
+}
+
+form input,textarea{
+    margin: 0 auto 20px auto;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    padding: 10px;
+}
+
+form .row{
+    width: 100%;
+    overflow: hidden;
+}
+form .row .name-input,
+form .row .email-input{
+    width: 50%;
+    float: left;
+}
+
+.name-input{
+    padding-right: 12px;
+}
+
+.email-input {
+    padding-left: 12px;
+}
+
+
+form input , form textarea{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+form button{
+    border: none;
+    background-color: #FF305B;
+    border-radius: 3px;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 1s;
+}
+
+form button:hover {
+    background-color: #EC2403;
+}
+
+
+/*END CONTACT SECTION*/
+
+
+/*START FOOTER*/
+.footer {
+    background: #333333;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.footer .copy-right {
+    color: #ffffff;
+    margin: 0;
+}
+
+.footer .copy-right a {
+    color: #ff305b;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+.footer .copy-right a:hover {
+    text-decoration: underline;
+}
